@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/presentation.css">
+    <title>Première question</title>
+    <script defer>
+        function quest(id, aws=0) {
+    switch (id) {
+        case 3:
+            if (aws == 270) {
+                window.location.href="page4.html";
+            } else {
+                window.location.href="game_over.html";
+            }  
+            break;
+        case 7:
+            if (aws == 270) {
+                window.location.href="page8.html";
+            }  else {
+                window.location.href="game_over.html";
+            }  
+            break;
+        case 8:
+            if (aws[0] == '1,4' && aws[1] == '12') {
+                window.location.href="page9.html";
+            }  else {
+                window.location.href="game_over.html";
+            }  
+            break;
+        case 10:
+            if (aws == 1) {
+                alert('Bravo ! ! ! ');
+                window.location.href="https://www.youtube.com/watch?v=yy0Bvu7vy9I";
+            }  else {
+                window.location.href="game_over.html";
+            }    
+            break;
+        default:
+            break;
+    }
+    
+}
+
+    </script>
+</head>
+<body>
+    <h2>Première question</h2>
+    <p>
+        Après sa construction, il y a exactement 302 ans,
+        les scientifiques de ma planète ont alimenté mon vaisseau
+        avec  280 mol de carbone 14. Sachant que le carbone 14 a
+        une durée de demi-vie de 5760 ans. Calculez combien de moles 
+        de carbone 14 ne se sont pas désintégrées. Donnez un nombre entier
+    </p>
+    <p class="following">
+        <input type="text" id="entree">
+        <label for="entree">mol</label>
+        <input type="button" value="Valider" onclick="quest(3, document.getElementById('entree').value);">
+    </p>
+</body>
+</html>

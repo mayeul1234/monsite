@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/presentation.css">
+    <title>Vous avez réussi</title>
+    <script defer>
+        function quest(id, aws=0) {
+    switch (id) {
+        case 3:
+            if (aws == 270) {
+                window.location.href="page4.html";
+            } else {
+                window.location.href="game_over.html";
+            }  
+            break;
+        case 7:
+            if (aws == 270) {
+                window.location.href="page8.html";
+            }  else {
+                window.location.href="game_over.html";
+            }  
+            break;
+        case 8:
+            if (aws[0] == '1,4' && aws[1] == '12') {
+                window.location.href="page9.html";
+            }  else {
+                window.location.href="game_over.html";
+            }  
+            break;
+        case 10:
+            if (aws == 1) {
+                alert('Bravo ! ! ! ');
+                window.location.href="https://www.youtube.com/watch?v=yy0Bvu7vy9I";
+            }  else {
+                window.location.href="game_over.html";
+            }    
+            break;
+        default:
+            break;
+    }
+    
+}
+
+    </script>
+</head>
+<body>
+    <h3>Vous avez réussi</h3>
+    <p>
+        Maintenant, il faut que le vaisseau emmagasine assez
+        d'energie pour pouvoir décoller. Pour cela, il faut utiliser
+        la puissance solaire réfléchit par la Terre.
+        Il lui faut 67500 W.h combien doit-il attendre en minutes?
+    </p>
+    <h4>
+        Données :
+    </h4>
+    <ul>
+        <li>puissance solaire réfléchie: 300W/m²</li>
+        <li>Surface du vaisseau:50m²</li>
+    </ul>
+    <p class="following">
+        <input type="text" id="entree"> <label for="entree">min</label>
+        <input type="button" value="Valider" onclick="quest(7, document.getElementById('entree').value);">
+    </p>
+</body>
+</html>
